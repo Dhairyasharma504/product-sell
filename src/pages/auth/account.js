@@ -1,4 +1,3 @@
-import 'twin.macro';
 import { NextSeo } from 'next-seo';
 import { useStoreState } from 'easy-peasy';
 import { gql, useQuery } from '@apollo/client';
@@ -27,8 +26,8 @@ const Account = () => {
   return (
     <Layout>
       <NextSeo title="My Account" url={`${config.siteUrl}/auth/account`} />
-      <section tw="text-gray-600">
-        <div tw="container px-5 py-24 mx-auto">
+      <section className="text-gray-600">
+        <div className="container px-5 py-24 mx-auto">
           <Heading type="h2">My Account</Heading>
           <p data-cy="check-login">
             {isLoggedIn

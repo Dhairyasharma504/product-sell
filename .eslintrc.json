@@ -11,10 +11,15 @@
     "prettier/prettier": [
       "error",
       {
+        "endOfLine": "auto",
         "singleQuote": true,
+        "parser": "flow",
         "trailingComma": "all",
         "bracketSpacing": true,
         "jsxBracketSameLine": false
+      },
+      {
+        "usePrettierrc": false
       }
     ],
     "global-require": "off",

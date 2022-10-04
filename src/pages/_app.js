@@ -10,8 +10,8 @@ import Router from 'next/router';
 
 import withReduxStore from '../utils/with-redux-store';
 import apolloClient from '../utils/apolloClient';
-import GlobalStyles from '../utils/styles';
 import config from '../utils/config';
+import '../utils/global.css';
 
 Router.events.on('routeChangeStart', (url) => {
   console.log(`Loading: ${url}`);
@@ -25,13 +25,12 @@ Router.events.on('routeChangeError', () => NProgress.done());
 function MyApp({ Component, pageProps, reduxStore }) {
   return (
     <>
-      <GlobalStyles />
       <Head>
-        <script async src="/scripts.js" />
+        <script async src='/scripts.js' />
       </Head>
       <DefaultSeo
         titleTemplate={`%s | ${config.siteName}`}
-        description="Free Images Gallery Builder"
+        description='Free Images Gallery Builder'
         openGraph={{
           type: 'website',
           locale: 'en_IE',
@@ -45,7 +44,7 @@ function MyApp({ Component, pageProps, reduxStore }) {
         }}
       />
       <ZeiqProvider>
-        <NextThemeProvider attribute="class" defaultTheme="light">
+        <NextThemeProvider attribute='class' defaultTheme='light'>
           <StoreProvider store={reduxStore}>
             <ApolloProvider client={apolloClient}>
               <Component {...pageProps} />
