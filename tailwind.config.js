@@ -5,14 +5,17 @@ module.exports = {
     './src/graphql/**/*.{js,ts,jsx,tsx}',
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/store/**/*.{js,ts,jsx,tsx}',
-    './src/utils/**/*.{js,ts,jsx,tsx}',
+    './src/utils/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Inter', 'sans-serif']
+    },
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography')]
 };

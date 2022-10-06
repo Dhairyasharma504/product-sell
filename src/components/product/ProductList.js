@@ -1,4 +1,6 @@
 import React from 'react';
+import Container from '../Container';
+
 import ProductItem from './ProductItem';
 
 const Products = [
@@ -61,29 +63,27 @@ const Products = [
   }
 ];
 const ProductList = () => (
-  <section>
-    <div className="mx-auto max-w-screen-xl px-4 py-10">
-      <div className="relative mx-auto max-w-3xl text-center">
-        <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-black/10" />
+  <Container>
+    <div className="relative mx-auto max-w-3xl text-center">
+      <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-black/10" />
 
-        <h2 className="relative inline-block bg-white px-4 text-center text-2xl font-bold">
-          Products
-        </h2>
-      </div>
+      <h2 className="relative inline-block bg-white px-4 text-center text-2xl font-bold">
+        Products
+      </h2>
+    </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-        {Products.map((item) => (
-          <ProductItem product={item} key={item.id} />
-        ))}
-      </div>
+    <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+      {Products.map((item) => (
+        <ProductItem product={item} key={item.id} />
+      ))}
+    </div>
 
-      {/* <div className="mt-4 text-center">
+    {/* <div className="mt-4 text-center">
         <button type="button" className="text-xs text-gray-500 underline">
           Clear Recently Viewed
         </button>
       </div> */}
-    </div>
-  </section>
+  </Container>
 );
 
 export default ProductList;
