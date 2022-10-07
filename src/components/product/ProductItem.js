@@ -34,7 +34,7 @@ const ProductItem = ({ product }) => (
       />
 
       <div className="p-0">
-        <p className="text-sm font-medium text-gray-600">${product.price}</p>
+        <p className="text-sm font-medium text-gray-600">£{product.price}</p>
 
         <h5 className="mt-1 text-lg font-bold">{product.title}</h5>
 

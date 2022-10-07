@@ -1,74 +1,16 @@
 import React from 'react';
+import Link from 'next/link';
 import Container from '../Container';
-
+import Products from '../../utils/data';
 import ProductItem from './ProductItem';
 
-const Products = [
-  {
-    id: 1,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 2,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 3,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 4,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 5,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 6,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-
-  {
-    id: 7,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  },
-  {
-    id: 8,
-    title: 'My Product',
-    price: 14,
-    image: '/images/Pizza.jpg',
-    href: ''
-  }
-];
 const ProductList = () => (
   <Container>
     <div className="relative mx-auto max-w-3xl text-center">
-      <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-black/10" />
+      <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-teal-600/100" />
 
       <h2 className="relative inline-block bg-white px-4 text-center text-2xl font-bold">
-        Products
+        New Arrivals
       </h2>
     </div>
 
@@ -78,11 +20,16 @@ const ProductList = () => (
       ))}
     </div>
 
-    {/* <div className="mt-4 text-center">
-        <button type="button" className="text-xs text-gray-500 underline">
-          Clear Recently Viewed
-        </button>
-      </div> */}
+    <div className=" my-14 text-center">
+      <Link href="/products">
+        <a
+          type="button"
+          className=" cursor-pointer text-xl inline-block rounded-lg border border-teal-600 px-12 py-3  font-medium text-teal-600 hover:bg-teal-600 hover:text-white focus:outline-none active:bg-teal-600"
+        >
+          View All →
+        </a>
+      </Link>
+    </div>
   </Container>
 );
 
