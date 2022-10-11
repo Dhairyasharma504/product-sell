@@ -11,75 +11,75 @@ const conf = convict({
     doc: 'The application environment.',
     format: ['production', 'development', 'test'],
     default: 'development',
-    env: 'NODE_ENV',
+    env: 'NODE_ENV'
   },
   appName: {
     doc: 'App Name',
     format: String,
-    default: 'Kickoff Nextjs Fullstack',
-    env: 'APP_NAME',
+    default: 'Foodwix-ecommerce',
+    env: 'APP_NAME'
   },
   webAppUrl: {
     doc: 'Web app url',
     format: String,
     default: 'http://www.site.com',
-    env: 'WEB_APP_URL',
+    env: 'WEB_APP_URL'
   },
   mongodb: {
     doc: 'URL to mongodb.',
     format: String,
     default: '',
-    env: 'MONGODB',
+    env: 'MONGODB'
   },
   adminEmail: {
     doc: 'Admin email ',
     format: String,
     default: 'no-reply@site.com',
-    env: 'ADMIN_EMAIL',
+    env: 'ADMIN_EMAIL'
   },
   jwtSecret: {
     doc: 'JWT secret.',
     format: String,
     default: 'MY_SITE_SECRET',
-    env: 'JWTSECRET',
+    env: 'JWTSECRET'
   },
   mailer: {
     user: {
       doc: 'Mailer user.',
       format: String,
-      default: '',
+      default: ''
     },
     password: {
       doc: 'Mailer password.',
       format: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   aws: {
     bucket: {
       doc: 'S3 Bucket name.',
       format: String,
       default: '',
-      env: 'AWS_BUCKET',
+      env: 'AWS_BUCKET'
     },
     region: {
       doc: 'S3 Region.',
       format: String,
-      default: 'us-west-2',
+      default: 'us-west-2'
     },
     identityPoolId: {
       doc: 'AWS IDENTITY_POOL_ID',
       format: String,
       default: '',
-      env: 'AWS_POOL_ID',
-    },
+      env: 'AWS_POOL_ID'
+    }
   },
   logdnaKey: {
     doc: 'Logdna Logger Key.',
     format: String,
     default: '',
-    env: 'LOGDNA_KEY',
-  },
+    env: 'LOGDNA_KEY'
+  }
 });
 
 const env = conf.get('env');
