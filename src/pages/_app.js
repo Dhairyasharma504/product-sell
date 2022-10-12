@@ -55,4 +55,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default withReduxStore(MyApp);
+export default MyApp;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsHandbag } from 'react-icons/bs';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -9,15 +10,17 @@ const Header = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block text-teal-600" href="/">
-              <span className="sr-only">Home</span>
-              <Image
-                src="/images/logo.webp"
-                alt="Picture of the author"
-                width={150}
-                height={50}
-              />
-            </a>
+            <Link href="/">
+              <a className="block text-teal-600">
+                <span className="sr-only">Home</span>
+                <Image
+                  src="/images/logo.webp"
+                  alt="Picture of the author"
+                  width={150}
+                  height={50}
+                />
+              </a>
+            </Link>
           </div>
 
           <div className="hidden md:block">
@@ -41,20 +44,19 @@ const Header = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex items-center sm:gap-4">
-              <a
-                className="hidden sm:flex rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="/"
-              >
-                Login
-              </a>
+              <Link href="/">
+                <a className="hidden sm:flex rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
+                  Login
+                </a>
+              </Link>
 
               <div className="hidden sm:flex">
-                <a
-                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                  href="/"
-                >
-                  Register
-                </a>
+                <Link href="/">
+                  {' '}
+                  <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
+                    Register
+                  </a>
+                </Link>
               </div>
               <div className="sm:flex cursor-pointer">
                 <BsHandbag />
