@@ -52,7 +52,6 @@ const Header = () => {
 
               <div className="hidden sm:flex">
                 <Link href="/">
-                  {' '}
                   <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
                     Register
                   </a>
@@ -96,20 +95,21 @@ const Header = () => {
             : 'hidden'
         } md:hidden`}
       >
-        <a
-          className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-          href="/"
-        >
-          Login
-        </a>
+        <Link href="/">
+          <a className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
+            Login
+          </a>
+        </Link>
 
         <div className="flex">
-          <a
-            className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-            href="/"
-          >
-            Register
-          </a>
+          <Link href="/">
+            <a
+              className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+              href="/"
+            >
+              Register
+            </a>
+          </Link>
         </div>
         <div className="hidden sm:flex cursor-pointer">
           <BsHandbag />
