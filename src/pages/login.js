@@ -14,11 +14,13 @@ const login = () => {
         <div className="grid min-h-screen place-items-center ">
           <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow-lg">
             {/* <h1 className="font-medium text-2xl mt-3 text-center">Login</h1> */}
-            <img
-              className="h-12 mx-auto mb-3"
-              alt="App Name"
-              src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
-            />
+            <Link href="/">
+              <img
+                className="h-12 mx-auto mb-3"
+                alt="App Name"
+                src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
+              />
+            </Link>
             <form action="" className="mt-6">
               <div className="my-5">
                 <Input text="username" />
@@ -37,7 +39,7 @@ const login = () => {
               <button
                 onClick={() => router.push('/dashboard')}
                 type="button"
-                className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
+                className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
               >
                 Sign in
               </button>

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer base {
+  body {
+
+  }
+}
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text{
+  @apply text-gray-500 text-opacity-80 text-base transform -translate-y-6 -translate-x-1.5 scale-75;
+}
