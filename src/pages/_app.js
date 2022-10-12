@@ -1,16 +1,13 @@
 import Head from 'next/head';
-import { ZeiqProvider } from '@zeiq/web';
-import { StoreProvider } from 'easy-peasy';
+
 import { DefaultSeo } from 'next-seo';
-import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { ThemeProvider } from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { ApolloProvider } from '@apollo/client/react';
+
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import theme, { GlobalStyle } from '../utils/theme';
-import withReduxStore from '../utils/with-redux-store';
-import apolloClient from '../utils/apolloClient';
+
 import config from '../utils/config';
 import '../utils/global.css';
 
@@ -23,7 +20,7 @@ Router.events.on('routeChangeComplete', () => {
 });
 Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, pageProps, reduxStore }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -51,12 +48,8 @@ function MyApp({ Component, pageProps, reduxStore }) {
         }}
       />
       <ThemeProvider theme={theme}>
-        <StoreProvider store={reduxStore}>
-          <ApolloProvider client={apolloClient}>
-            <Component {...pageProps} />
-            <GlobalStyle />
-          </ApolloProvider>
-        </StoreProvider>
+        <Component {...pageProps} />
+        <GlobalStyle />
       </ThemeProvider>
     </>
   );
