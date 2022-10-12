@@ -97,7 +97,6 @@
     "tailwindcss": "^3.0.23"
   },
   "prettier": {
-    "singleQuote": true,
-    "trailingComma": "none"
+    "singleQuote": true
   }
 }

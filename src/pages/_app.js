@@ -39,12 +39,12 @@ function MyApp({ Component, pageProps }) {
           type: 'website',
           locale: 'en_IE',
           url: config.siteUrl,
-          site_name: config.siteName
+          site_name: config.siteName,
         }}
         twitter={{
           handle: '@galllery',
           site: '@site',
-          cardType: 'summary_large_image'
+          cardType: 'summary_large_image',
         }}
       />
       <ThemeProvider theme={theme}>

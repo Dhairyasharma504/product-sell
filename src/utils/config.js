@@ -9,7 +9,7 @@ const config = {
 
   email: 'no-reply@site.com',
   telephone: '+1123123123',
-  address: 'London, UK'
+  address: 'London, UK',
 };
 
 export default config;

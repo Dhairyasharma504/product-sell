@@ -4,42 +4,42 @@ const Products = [
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 2,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 3,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 4,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 5,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 6,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
 
   {
@@ -47,15 +47,15 @@ const Products = [
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
+    href: '',
   },
   {
     id: 8,
     title: 'My Product',
     price: 14,
     image: '/images/Pizza.jpg',
-    href: ''
-  }
+    href: '',
+  },
 ];
 
 export default Products;
