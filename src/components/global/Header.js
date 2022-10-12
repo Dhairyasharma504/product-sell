@@ -51,7 +51,7 @@ const Header = () => {
               </Link>
 
               <div className="hidden sm:flex">
-                <Link href="/">
+                <Link href="/login">
                   <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
                     Register
                   </a>
@@ -102,11 +102,8 @@ const Header = () => {
         </Link>
 
         <div className="flex">
-          <Link href="/">
-            <a
-              className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-              href="/"
-            >
+          <Link href="/login">
+            <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
               Register
             </a>
           </Link>
