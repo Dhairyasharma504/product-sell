@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Input = ({ text }) => (
+const Input = ({ text, ...props }) => (
   <div className=" mb-6">
     <label className="relative cursor-pointer">
       <input
-        type="text"
-        placeholder="Input"
+        {...props}
         className=" text-black bg-white  text-body-color text-base  w-full
         rounded
         py-3

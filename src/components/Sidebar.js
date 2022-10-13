@@ -7,6 +7,7 @@ import {
   SidebarFooter,
 } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
+import styled from 'styled-components';
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -17,17 +18,21 @@ import {
   FiArrowRight,
   FiArrowLeft,
 } from 'react-icons/fi';
-import { MdOutlineDashboard, MdSupport, MdBarChart } from 'react-icons/md';
+import { MdOutlineDashboard } from 'react-icons/md';
 import { RiSettings3Line } from 'react-icons/ri';
-import {
-  BsCalendar4Event,
-  BsCreditCard2Front,
-  BsCurrencyDollar,
-  BsFileEarmarkText,
-} from 'react-icons/bs';
+// import {
+//   BsCalendar4Event,
+//   BsCreditCard2Front,
+//   BsCurrencyDollar,
+//   BsFileEarmarkText,
+// } from 'react-icons/bs';
 
 // import config from '../../utils/config';
-
+const Container = styled.div`
+  .pro-sidebar-inner {
+    background: #0d9488 !important;
+  }
+`;
 const menuItems = [
   {
     id: 1,
@@ -65,57 +70,59 @@ function Sidebar({ data, toggled, onToggle }) {
   };
 
   return (
-    <ProSidebar
-      collapsed={collapsed}
-      toggled={toggled}
-      breakPoint="xl"
-      width={250}
-      onToggle={onToggle}
-    >
-      <SidebarHeader>
-        <Menu>
-          <MenuItem>
-            <div className="text-center h-16 py-1">
-              <img
-                className="h-16"
-                alt="App Name"
-                src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
-                layout="fill"
-                quality={100}
-                objectFit="contain"
-              />
-            </div>
-          </MenuItem>
-        </Menu>
-      </SidebarHeader>
-      <SidebarContent>
-        <Menu iconShape="square">
-          {menuItems.map((item) => (
-            <MenuItem
-              key={item.id}
-              active={router.pathname === item.path}
-              icon={item.icon}
-              onClick={() => router.push(item.path)}
-            >
-              {item.title}
+    <Container className="shadow-lg flex-1 h-screen">
+      <ProSidebar
+        collapsed={collapsed}
+        toggled={toggled}
+        breakPoint="xl"
+        width={250}
+        onToggle={onToggle}
+      >
+        <SidebarHeader>
+          <Menu>
+            <MenuItem>
+              <div className="text-center h-16 py-1">
+                <img
+                  className="h-16"
+                  alt="App Name"
+                  src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
+                  layout="fill"
+                  quality={100}
+                  objectFit="contain"
+                />
+              </div>
             </MenuItem>
-          ))}
-        </Menu>
-      </SidebarContent>
-      <SidebarFooter>
-        <Menu iconShape="circle">
-          <MenuItem
-            onClick={() => setCollapsed(!collapsed)}
-            icon={!collapsed ? <FiArrowLeft /> : <FiArrowRight />}
-          >
-            {collapsed ? 'Show' : 'Hide'}
-          </MenuItem>
-          <MenuItem icon={<FiLogOut />} onClick={() => logout()}>
-            Log out
-          </MenuItem>
-        </Menu>
-      </SidebarFooter>
-    </ProSidebar>
+          </Menu>
+        </SidebarHeader>
+        <SidebarContent>
+          <Menu iconShape="square">
+            {menuItems.map((item) => (
+              <MenuItem
+                key={item.id}
+                active={router.pathname === item.path}
+                icon={item.icon}
+                onClick={() => router.push(item.path)}
+              >
+                {item.title}
+              </MenuItem>
+            ))}
+          </Menu>
+        </SidebarContent>
+        <SidebarFooter>
+          <Menu iconShape="circle">
+            <MenuItem
+              onClick={() => setCollapsed(!collapsed)}
+              icon={!collapsed ? <FiArrowLeft /> : <FiArrowRight />}
+            >
+              {collapsed ? 'Show' : 'Hide'}
+            </MenuItem>
+            <MenuItem icon={<FiLogOut />} onClick={() => logout()}>
+              Log out
+            </MenuItem>
+          </Menu>
+        </SidebarFooter>
+      </ProSidebar>
+    </Container>
   );
 }
 export default Sidebar;

@@ -26,19 +26,33 @@ const Register = () => {
           <form className="mt-6">
             <div className="flex justify-between gap-3">
               <span className="w-1/2">
-                <Input text="first name" />
+                <Input
+                  type="text"
+                  placeholder="FirstName"
+                  text="first name"
+                  id="firstName"
+                />
               </span>
               <span className="w-1/2">
-                <Input text="last name" />
+                <Input
+                  type="text"
+                  placeholder="LastName"
+                  text="last name"
+                  id="lastName"
+                />
               </span>
             </div>
-            <Input text="e-mail" />
-            <Input text="password" />
-            <Input text="confirm-password" />
+            <Input type="text" placeholder="Email" text="e-mail" id="email" />
+            <Input type="text" placeholder="Password" text="password" />
+            <Input
+              type="text"
+              placeholder="ConfirmPassword"
+              text="confirm-password"
+            />
             <button
               onClick={() => router.push('/dashboard')}
               type="button"
-              className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
+              className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
             >
               Sign up
             </button>
