@@ -30,7 +30,11 @@ import { RiSettings3Line } from 'react-icons/ri';
 // import config from '../../utils/config';
 const Container = styled.div`
   .pro-sidebar-inner {
-    background: #0d9488 !important;
+    background: black !important;
+  }
+
+  .pro-menu-item:hover {
+    border-right: solid 5px !important;
   }
 `;
 const menuItems = [
@@ -60,7 +64,7 @@ const menuItems = [
   },
 ];
 
-function Sidebar({ data, toggled, onToggle }) {
+function Sidebar({ toggled, onToggle }) {
   const [collapsed, setCollapsed] = useState(false);
   const router = useRouter();
   // console.log('x', router);
@@ -95,7 +99,7 @@ function Sidebar({ data, toggled, onToggle }) {
           </Menu>
         </SidebarHeader>
         <SidebarContent>
-          <Menu iconShape="square">
+          <Menu iconShape="circle">
             {menuItems.map((item) => (
               <MenuItem
                 key={item.id}

@@ -3,7 +3,7 @@ import { HiMenuAlt1 } from 'react-icons/hi';
 
 const Headers = ({ onMenuClick }) => (
   <div className="w-screen bg-white py-3 pl-2 lg:pl-56 ">
-    <button onClick={onMenuClick}>
+    <button type="button" onClick={onMenuClick}>
       <HiMenuAlt1 />
     </button>
     {/* <input

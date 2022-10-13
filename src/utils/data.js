@@ -3,7 +3,7 @@ const Products = [
     id: 1,
     title: 'My Product',
     price: 14,
-    image: '/images/Pizza.jpg',
+    image: '/images/items.jpg',
     href: '',
   },
   {

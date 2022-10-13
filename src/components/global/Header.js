@@ -95,14 +95,14 @@ const Header = () => {
             : 'hidden'
         } md:hidden`}
       >
-        <Link href="/">
+        <Link href="/login">
           <a className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow">
             Login
           </a>
         </Link>
 
-        <div className="flex">
-          <Link href="/login">
+        <div className="flex py-4">
+          <Link href="/register">
             <a className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600">
               Register
             </a>
