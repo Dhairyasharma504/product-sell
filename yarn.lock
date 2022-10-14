@@ -2609,7 +2609,7 @@
   resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.0.0.tgz#443655b74713ec65531726fb5a30c5c528c804bf"
   integrity sha512-TNQK6cufwrhd8ASDk5YHHenH8Xhp9sY8xUjOTKnQQI37KLk+Sw2HlHhT5rzUFN23ahosUlkY8InwtYUmSNb9kw==
 
-"@vercel/node@2.5.24":
+"@vercel/node@2.5.24", "@vercel/node@^2.5.24":
   version "2.5.24"
   resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.24.tgz#f2ca3418e94afc9c99d301b131795c2e326a75f1"
   integrity sha512-DrvAQMyngMjnyHr3uhvShXi1f3iBTrURa/6vLQkWPJv1lfcVP/tcz7uwVX4tAb0a0i+reNhMMdUxH75m/Q6OdA==

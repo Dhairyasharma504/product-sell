@@ -29,6 +29,7 @@
     "@mdx-js/loader": "^2.0.0",
     "@next/mdx": "^12.1.0",
     "@tailwindcss/typography": "^0.5.2",
+    "@vercel/node": "^2.5.24",
     "@zeiq/core": "^1.1.0",
     "@zeiq/web": "^1.1.4",
     "apollo-link": "^1.2.14",

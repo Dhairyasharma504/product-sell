@@ -86,7 +86,7 @@ function Sidebar({ toggled, onToggle }) {
           <Menu>
             <MenuItem>
               <div className="text-center h-16 py-1">
-                <img
+                {/* <img
                   className={`${collapsed ? 'h-10 w-10' : 'h-14'}`}
                   alt="App Name"
                   src={`${
@@ -97,7 +97,7 @@ function Sidebar({ toggled, onToggle }) {
                   layout="fill"
                   quality={100}
                   objectFit="contain"
-                />
+                /> */}
               </div>
             </MenuItem>
           </Menu>
