@@ -23,10 +23,10 @@ const login = () => {
             </Link>
             <form action="" className="mt-6">
               <div className="my-5">
-                <Input text="username" />
+                <Input text="username" type="text" placeholder="username" />
               </div>
               <div className="mt-5">
-                <Input text="password" />
+                <Input text="password" type="text" placeholder="password" />
                 <div className="flex justify-end mt-2 text-xs text-gray-600">
                   <Link href="/forgetPassword">
                     <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
