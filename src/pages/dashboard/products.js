@@ -3,10 +3,7 @@ import LayoutDashboard from '../../components/DashboardLayout';
 
 const Products = () => (
   <div>
-    <LayoutDashboard>
-
-
-      Products list Header </LayoutDashboard>
+    <LayoutDashboard />
   </div>
 );
 export default Products;

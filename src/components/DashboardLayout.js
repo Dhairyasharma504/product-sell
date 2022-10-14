@@ -1,5 +1,4 @@
-import Router from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
@@ -7,9 +6,7 @@ export default function LayoutDashboard({ children }) {
   const [showSideBar, setShowSideBar] = useState(true);
   const [showMobileSideBar, setShowMobileSideBar] = useState(false);
 
-  const userData = {
-    name:"Amit"
-  };
+  const userData = {};
   return (
     <div className="flex min-h-screen">
       <div className={showSideBar ? 'xl:block block' : 'hidden'}>
@@ -30,7 +27,6 @@ export default function LayoutDashboard({ children }) {
               setShowSideBar(!showSideBar);
               setShowMobileSideBar(!showMobileSideBar);
             }}
-            setFilter={(val) => console.log("val")}
           />
         </div>
         <div className="p-5 w-full overflow-x-hidden">{children}</div>
