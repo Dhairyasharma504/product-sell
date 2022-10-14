@@ -14,7 +14,7 @@ const Input = ({ text, ...props }) => (
         focus-visible:shadow-none
         focus:border-primary focus:border-blue-500 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
       />
-      <span className=" capitalize text-lg text-gray-400 bg-white absolute left-5 top-0 transition duration-200 input-text">
+      <span className=" capitalize text-sm px-2 text-gray-400 bg-white absolute left-3 top-0 transition duration-200 input-text">
         {text}
       </span>
     </label>

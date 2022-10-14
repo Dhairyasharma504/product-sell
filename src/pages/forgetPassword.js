@@ -32,17 +32,18 @@ const forgetPassword = () => (
               />
             </div>
             <div className="mt-5" />
-
-            <button
-              type="submit"
-              className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
-            >
-              reset password
-            </button>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="w-3/4 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
+              >
+                reset password
+              </button>
+            </div>
           </form>
 
           <div className="mt-5 text-center  ">
-            <Link href="/">
+            <Link href="/login">
               <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
                 Already have an account? Login!
               </a>

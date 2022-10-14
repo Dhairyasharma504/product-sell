@@ -49,13 +49,15 @@ const Register = () => {
               placeholder="ConfirmPassword"
               text="confirm-password"
             />
-            <button
-              onClick={() => router.push('/dashboard')}
-              type="button"
-              className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
-            >
-              Sign up
-            </button>
+            <div className="text-center">
+              <button
+                onClick={() => router.push('/dashboard')}
+                type="button"
+                className="w-3/4 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-green-600 hover:shadow-none"
+              >
+                Sign up
+              </button>
+            </div>
             <Link href="/login">
               <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
                 Already registered?

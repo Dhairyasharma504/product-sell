@@ -35,14 +35,15 @@ const login = () => {
                   </Link>
                 </div>
               </div>
-
-              <button
-                onClick={() => router.push('/dashboard')}
-                type="button"
-                className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-teal-600 hover:shadow-none"
-              >
-                Sign in
-              </button>
+              <div className="text-center">
+                <button
+                  onClick={() => router.push('/dashboard')}
+                  type="button"
+                  className="w-3/4 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-green-600 hover:shadow-none"
+                >
+                  Sign in
+                </button>
+              </div>
             </form>
 
             <p className="mt-4 flex text-xs text-center justify-center font-light text-black ">
