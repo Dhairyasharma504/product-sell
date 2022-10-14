@@ -87,9 +87,13 @@ function Sidebar({ toggled, onToggle }) {
             <MenuItem>
               <div className="text-center h-16 py-1">
                 <img
-                  className="h-16"
+                  className={`${collapsed ? 'h-10 w-10' : 'h-14'}`}
                   alt="App Name"
-                  src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
+                  src={`${
+                    !collapsed
+                      ? 'https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75'
+                      : '/images/Foodwix-icon.png'
+                  }`}
                   layout="fill"
                   quality={100}
                   objectFit="contain"
