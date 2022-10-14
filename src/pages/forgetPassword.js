@@ -25,7 +25,11 @@ const forgetPassword = () => (
           </div>
           <form action="" className="mt-10">
             <div className="my-5">
-              <Input text="Enter email address" />
+              <Input
+                text="Enter email address"
+                type="text"
+                placeholder="Enter email address"
+              />
             </div>
             <div className="mt-5" />
 
