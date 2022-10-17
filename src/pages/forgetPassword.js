@@ -9,7 +9,7 @@ const forgetPassword = () => (
       style={{ backgroundImage: `url('../images/food-restaurant.jpg')` }}
     >
       <div className="grid min-h-screen place-items-center ">
-        <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow-lg">
+        <div className="w-11/12 p-5 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12 shadow-lg">
           {/* <h1 className="font-medium text-2xl mt-3 text-center">Login</h1> */}
           <img
             className="h-12 mx-auto mb-3"
@@ -24,7 +24,7 @@ const forgetPassword = () => (
             </p>
           </div>
           <form action="" className="mt-10">
-            <div className="my-5">
+            <div className="my-5 px-12">
               <Input
                 text="Enter email address"
                 type="text"

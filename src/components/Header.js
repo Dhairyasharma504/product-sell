@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { HiMenuAlt1 } from 'react-icons/hi';
 
 const Headers = ({ onMenuClick }) => (
@@ -36,10 +37,20 @@ const Headers = ({ onMenuClick }) => (
       </div>
     </div>
 
-    <div>
+    <div className="flex">
       <button type="button" onClick={onMenuClick}>
         <HiMenuAlt1 />
       </button>
+
+      <div className=" bg-gray-50 rounded-full hover:bg-slate-100 space-x-3">
+        <Link href="/">
+          <img
+            className="h-11 w-11 m-2 rounded-full object-fill object-center overflow-hidden"
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1…d=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt
+          />
+        </Link>
+      </div>
     </div>
   </div>
 );

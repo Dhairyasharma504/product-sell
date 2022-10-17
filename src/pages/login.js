@@ -23,7 +23,11 @@ const login = () => {
             </Link>
             <form action="" className="mt-6">
               <div className="my-5">
-                <Input text="username" type="text" placeholder="username" />
+                <Input
+                  text="username/mobile-no"
+                  type="text"
+                  placeholder="username"
+                />
               </div>
               <div className="mt-5">
                 <Input text="password" type="text" placeholder="password" />
