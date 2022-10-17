@@ -5,7 +5,7 @@ import Input from '../../components/elements/Input';
 const Profile = () => (
   <div className="">
     <LayoutDashboard>
-      <div className="p-8">
+      <div className="p-3">
         <div className="flex space-x-6">
           <Input text="first-name" type="text" placeholder="first-name" />{' '}
           <Input text="last-name" type="text" placeholder="last-name" />{' '}
