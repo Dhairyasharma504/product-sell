@@ -30,11 +30,23 @@ import { RiSettings3Line } from 'react-icons/ri';
 // import config from '../../utils/config';
 const Container = styled.div`
   .pro-sidebar-inner {
-    background: black !important;
+    background: #1f23a5 !important;
   }
 
-  .pro-menu-item:hover {
-    border-right: solid 5px !important;
+  .pro-icon-wrapper {
+    background: black !important;
+    opacity: 0.5;
+  }
+  .pro-icon-wrapper:hover {
+    background: black !important;
+    opacity: 0.8;
+  }
+  .pro-item-content {
+    color: white;
+  }
+  .pro-menu-item :hover {
+    background-color: darkblue;
+    opacity: 0.9;
   }
 `;
 const menuItems = [
@@ -61,6 +73,12 @@ const menuItems = [
     title: 'Settings',
     icon: <RiSettings3Line />,
     path: '/dashboard/settings',
+  },
+  {
+    id: 4,
+    title: 'Profile',
+    icon: <RiSettings3Line />,
+    path: '/dashboard/profile',
   },
 ];
 
