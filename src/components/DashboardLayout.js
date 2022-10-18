@@ -8,11 +8,11 @@ export default function LayoutDashboard({ children }) {
 
   const userData = {};
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen ">
       <div className={showSideBar ? 'xl:block block' : 'hidden'}>
         <Sidebar toggled={false} data={userData} />
       </div>
-      <div className={showMobileSideBar ? 'xl:hidden block' : 'hidden'}>
+      <div className={showMobileSideBar ? 'xl:hidden block h-full' : 'hidden'}>
         <Sidebar
           data={userData}
           toggled={showMobileSideBar}

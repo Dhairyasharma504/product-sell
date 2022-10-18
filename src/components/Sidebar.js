@@ -29,24 +29,49 @@ import { RiSettings3Line } from 'react-icons/ri';
 
 // import config from '../../utils/config';
 const Container = styled.div`
-  .pro-sidebar-inner {
-    background: #1f23a5 !important;
+  .pro-sidebar .pro-menu .pro-menu-item.active {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #ffffff !important;
+    background-color: #f8b739;
+
+    .pro-item-content {
+      color: #ffffff !important;
+    }
+  }
+  .pro-sidebar .pro-sidebar-content .pro-menu .pro-menu-item,
+  .pro-sidebar .pro-sidebar-footer .pro-menu .pro-menu-item {
+    .pro-icon-wrapper {
+      color: #f8b739 !important;
+    }
+    .pro-item-content {
+      color: #ffffff !important;
+    }
+    :hover {
+      color: #f8b739 !important ;
+      .pro-icon-wrapper {
+        color: #39b461 !important;
+        background: #ffffff !important;
+      }
+      .pro-item-content {
+        color: #f8b739 !important ;
+        font-family: poppins, Arial, sans-serif;
+      }
+    }
   }
 
-  .pro-icon-wrapper {
-    background: black !important;
-    opacity: 0.5;
+  .pro-sidebar-header nav {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    .pro-inner-item {
+      padding: 8px 5px 8px !important;
+    }
   }
-  .pro-icon-wrapper:hover {
-    background: black !important;
-    opacity: 0.8;
+  .pro-sidebar-content {
+    flex-grow: 0 !important;
   }
-  .pro-item-content {
-    color: white;
-  }
-  .pro-menu-item :hover {
-    background-color: darkblue;
-    opacity: 0.9;
+  .pro-sidebar-layout {
+    background-color: black !important;
   }
 `;
 const menuItems = [
@@ -92,7 +117,7 @@ function Sidebar({ toggled, onToggle }) {
   };
 
   return (
-    <Container className="shadow-lg flex-1 h-screen">
+    <Container className="flex-1 min-h-screen h-full">
       <ProSidebar
         collapsed={collapsed}
         toggled={toggled}

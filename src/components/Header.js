@@ -1,15 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import { HiMenuAlt1 } from 'react-icons/hi';
 
-const Container = styled.div`
-   {
-    background: #1f23a5 !important;
-  }
-`;
 const Headers = ({ onMenuClick }) => (
-  <Container>
+  <div className="bg-primary">
     <div className=" px-2 items-center py-3 justify-between flex mx-auto ">
       <div className="xl:w-96">
         <div className="input-group relative flex  items-stretch">
@@ -46,11 +40,11 @@ const Headers = ({ onMenuClick }) => (
 
       <div className="flex ">
         <button type="button" onClick={onMenuClick}>
-          <HiMenuAlt1 />
+          <HiMenuAlt1 className="text-white h-8 w-8 hover:text-brand" />
         </button>
 
-        <div className="  rounded-full  hover:bg-blue-100 duration-700    ">
-          <Link href="/profile">
+        <div className="  rounded-full cursor-pointer ">
+          <Link href="/dashboard/profile">
             <img
               className="h-11 w-11  rounded-full object-fill object-center overflow-hidden m-2"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1…d=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -60,7 +54,7 @@ const Headers = ({ onMenuClick }) => (
         </div>
       </div>
     </div>
-  </Container>
+  </div>
 );
 
 export default Headers;

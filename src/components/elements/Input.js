@@ -12,7 +12,7 @@ const Input = ({ text, ...props }) => (
         border border-[f0f0f0]
         outline-none
         focus-visible:shadow-none
-        focus:border-primary focus:border-blue-500 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
+     focus:border-blue-500 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
       />
       <span className=" capitalize text-sm px-2 text-gray-400 bg-white absolute left-3 top-0 transition duration-200 input-text">
         {text}
