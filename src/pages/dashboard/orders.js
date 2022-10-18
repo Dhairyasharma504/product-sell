@@ -27,6 +27,7 @@ export default function Orders() {
                     <img
                       className="w-6 h-6 rounded-full"
                       src="https://randomuser.me/api/portraits/men/1.jpg"
+                      alt="portraits"
                     />
 
                     <span className="font-medium">Rimple</span>

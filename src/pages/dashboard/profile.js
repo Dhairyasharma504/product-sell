@@ -10,7 +10,7 @@ const Profile = () => (
           <img
             src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
             className="mx-auto h-32 w-32 rounded-full hover:opacity-50"
-            alt="photo"
+            alt="round"
           />
         </div>
         <div className="grid grid-cols-2 gap-7  items-center">

@@ -13,7 +13,7 @@ const addProduct = () => {
             <img
               src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
               className="mx-auto h-64 w-50 "
-              alt="photo"
+              alt="square"
             />
           </div>
           <div className="grid grid-cols-2 gap-7  items-center">
