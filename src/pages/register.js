@@ -58,7 +58,7 @@ const Register = () => {
                 Sign up
               </button>
             </div>
-            <Link href="/login">
+            <Link href="/">
               <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
                 Already registered?
               </a>

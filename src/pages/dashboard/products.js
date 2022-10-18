@@ -9,7 +9,9 @@ const Products = () => {
   return (
     <div>
       <LayoutDashboard>
-        product page
+        <div>
+          <p className="text-2xl font-semibold">product page</p>
+        </div>
         <div className="text-right">
           <button
             onClick={() => router.push('/fields/AddProduct_field')}

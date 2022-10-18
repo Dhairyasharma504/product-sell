@@ -99,12 +99,6 @@ const menuItems = [
     icon: <RiSettings3Line />,
     path: '/dashboard/settings',
   },
-  {
-    id: 4,
-    title: 'Profile',
-    icon: <RiSettings3Line />,
-    path: '/dashboard/profile',
-  },
 ];
 
 function Sidebar({ toggled, onToggle }) {

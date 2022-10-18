@@ -43,7 +43,7 @@ const forgetPassword = () => (
           </form>
 
           <div className="mt-5 text-center  ">
-            <Link href="/login">
+            <Link href="/">
               <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
                 Already have an account? Login!
               </a>

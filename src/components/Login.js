@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Input from '../components/elements/Input';
+import Input from './elements/Input';
 
 const login = () => {
   const router = useRouter();
