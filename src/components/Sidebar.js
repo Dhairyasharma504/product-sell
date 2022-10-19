@@ -34,9 +34,11 @@ const Container = styled.div`
     border-bottom-right-radius: 30px;
     color: #ffffff !important;
     background-color: #f8b739;
-
     .pro-item-content {
       color: #ffffff !important;
+    }
+    .pro-icon-wrapper {
+      background: #ffffff !important;
     }
   }
   .pro-sidebar .pro-sidebar-content .pro-menu .pro-menu-item,
@@ -49,13 +51,10 @@ const Container = styled.div`
     }
     :hover {
       color: #f8b739 !important ;
+      border-right: 5px solid #f8b739;
       .pro-icon-wrapper {
-        color: #39b461 !important;
+        color: #f8b739 !important;
         background: #ffffff !important;
-      }
-      .pro-item-content {
-        color: #f8b739 !important ;
-        font-family: poppins, Arial, sans-serif;
       }
     }
   }

@@ -15,7 +15,7 @@ const Headers = ({ onMenuClick }) => (
             aria-describedby="button-addon2"
           />
           <button
-            className="btn  px-6 py-2.5 bg-blue-700 text-white font-medium text-xs leading-tight uppercase rounded-r shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+            className="btn  px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-r shadow-md hover:bg-brand hover:shadow-lg focus:bg-brand  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-brand active:shadow-lg transition duration-150 ease-in-out flex items-center"
             type="button"
             id="button-addon2"
           >

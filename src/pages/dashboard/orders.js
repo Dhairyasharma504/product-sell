@@ -22,7 +22,7 @@ export default function Orders() {
             />
             <tbody className="text-gray-600 text-sm font-light">
               <tr className="border-b border-gray-200 hover:bg-gray-100">
-                <td className="py-3 text-left ">
+                <td className="py-3 px-2 text-left ">
                   <div className="flex items-center">
                     <img
                       className="w-6 h-6 rounded-full"
@@ -33,23 +33,23 @@ export default function Orders() {
                     <span className="font-medium">Rimple</span>
                   </div>
                 </td>
-                <td className="py-3 text-right">
+                <td className="py-3 px-3 text-right">
                   <div className="flex items-center">
                     <span>24-saraba nagar</span>
                   </div>
                 </td>
-                <td className="py-3  text-left">
+                <td className="py-3 px-3 text-left">
                   <div className="">Fresh salad bowl</div>
                 </td>
-                <td className="py-3  text-left">
+                <td className="py-3 px-3 text-left">
                   <div className="pl-4">2</div>
                 </td>
-                <td className="py-3  text-left">
+                <td className="py-3 px-3 text-left">
                   <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
                     Deilvering
                   </span>
                 </td>
-                <td className="py-3 text-left ">
+                <td className="py-3 px-3 text-left ">
                   <div className="flex item-center justify-center">
                     <div className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
                       <svg

@@ -20,11 +20,7 @@ const addProduct = () => {
             <Input text="product-name" type="text" placeholder="product-name" />
             <Input text="price" type="text" placeholder="price" />
           </div>
-          <Input
-            text="contact Number"
-            type="text"
-            placeholder="contact Number"
-          />
+          <Input text="description" type="text" placeholder="description" />
 
           <div className="text-center">
             <button
@@ -32,7 +28,7 @@ const addProduct = () => {
               type="button"
               className="w-3/4 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-brand hover:shadow-none"
             >
-              upload
+              submit
             </button>
           </div>
         </div>
