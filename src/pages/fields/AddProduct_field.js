@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import LayoutDashboard from '../../components/DashboardLayout';
 import Input from '../../components/elements/Input';
+import UploadImageInput from '../../components/elements/UploadImageInput';
 
 const addProduct = () => {
   const router = useRouter();
@@ -10,10 +11,9 @@ const addProduct = () => {
       <LayoutDashboard>
         <div className="p-3 max-w-screen-md mx-auto">
           <div className="mb-8">
-            <img
-              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
-              className="mx-auto h-64 w-50 "
-              alt="square"
+            <UploadImageInput
+              value=""
+              onChange={(val) => console.log('val', val)}
             />
           </div>
           <div className="grid grid-cols-2 gap-7  items-center">
