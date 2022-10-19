@@ -27,7 +27,7 @@ function UploadImageInput({
   const [
     uploadedFileUrl,
     isUploading,
-    fileType,
+    // fileType,
     { setFile, setFileName, setFileType, setUploadedFileUrl },
   ] = useFileUploading();
 
