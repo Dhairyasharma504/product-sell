@@ -1,7 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
+
 import { useRouter } from 'next/router';
-import Input from '../../components/elements/Input';
+
+import Signup from '../../components/forms/Signup';
 
 const Register = () => {
   const router = useRouter();
@@ -23,47 +24,7 @@ const Register = () => {
               please fill in your information to continue
             </span>
           </h1>
-          <form className="mt-6">
-            <div className="flex justify-between gap-3">
-              <span className="w-1/2">
-                <Input
-                  type="text"
-                  placeholder="FirstName"
-                  text="first name"
-                  id="firstName"
-                />
-              </span>
-              <span className="w-1/2">
-                <Input
-                  type="text"
-                  placeholder="LastName"
-                  text="last name"
-                  id="lastName"
-                />
-              </span>
-            </div>
-            <Input type="text" placeholder="Email" text="e-mail" id="email" />
-            <Input type="text" placeholder="Password" text="password" />
-            <Input
-              type="text"
-              placeholder="ConfirmPassword"
-              text="confirm-password"
-            />
-            <div className="text-center">
-              <button
-                onClick={() => router.push('/dashboard')}
-                type="button"
-                className="w-3/4 py-3 mt-6 font-medium tracking-widest text-white uppercase bg-yellow-500 shadow-lg focus:outline-none hover:bg-green-600 hover:shadow-none"
-              >
-                Sign up
-              </button>
-            </div>
-            <Link href="/">
-              <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
-                Already registered?
-              </a>
-            </Link>
-          </form>
+          <Signup onSubmit={() => router.push('/dashboard')} />
         </div>
       </div>
     </div>

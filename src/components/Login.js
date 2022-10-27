@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Input from './elements/Input';
-import Button from './elements/Button';
+import LoginForm from './forms/LoginForm';
 
 const login = () => {
   const router = useRouter();
@@ -22,32 +21,13 @@ const login = () => {
                 src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
               />
             </Link>
-            <form action="" className="mt-6">
-              <div className="my-5">
-                <Input
-                  text="username/mobile-no"
-                  type="text"
-                  placeholder="username"
-                />
-              </div>
-              <div className="mt-5">
-                <Input text="password" type="text" placeholder="password" />
-                <div className="flex justify-end mt-2 text-xs text-gray-600">
-                  <Link href="/auth/forgot-password">
-                    <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
-                      forget Password
-                    </a>
-                  </Link>
-                </div>
-              </div>
-              <Button onClick={() => router.push('/dashboard')}>login</Button>
-            </form>
+            <LoginForm onSubmit={() => router.push('/dashboard')} />
 
             <p className="mt-4 flex text-xs text-center justify-center font-light text-black ">
               Don&apos;t have an account?
               <Link href="/auth/register">
                 <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
-                  create one
+                  Create one
                 </a>
               </Link>
             </p>

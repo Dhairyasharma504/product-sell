@@ -1,11 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Input = ({ text, ...props }) => (
-  <div className=" mb-6">
+const InputWrapper = styled.div`
+  // input:-internal-autofill-selected {
+  //   background-color: green !important;
+  // }
+`;
+const Input = ({ text, error, ...props }) => (
+  <InputWrapper className=" mb-6">
     <label className="relative cursor-pointer">
       <input
         {...props}
-        className=" text-black bg-white  text-body-color text-base  w-full
+        className=" text-black bg-white  text-body-color text-base  w-full autofill:bg-red-800
         rounded
         py-3
         px-[14px]
@@ -18,7 +24,8 @@ const Input = ({ text, ...props }) => (
         {text}
       </span>
     </label>
-  </div>
+    {error && <p className="italic text-sm text-red-500 mt-2 ">{error}</p>}
+  </InputWrapper>
 );
 
 export default Input;
