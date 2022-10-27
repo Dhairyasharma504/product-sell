@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Input from '../components/elements/Input';
+import Input from '../../components/elements/Input';
 
 const forgetPassword = () => (
   <div>
@@ -49,7 +49,7 @@ const forgetPassword = () => (
               </a>
             </Link>
 
-            <Link href="/register">
+            <Link href="/auth/register">
               <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
                 Create an Account!
               </a>

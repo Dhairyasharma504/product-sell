@@ -2,7 +2,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import LayoutDashboard from '../../components/DashboardLayout';
 import Input from '../../components/elements/Input';
-import UploadImageInput from '../../components/elements/UploadImageInput';
 
 const addProduct = () => {
   const router = useRouter();
@@ -10,12 +9,7 @@ const addProduct = () => {
     <div className="">
       <LayoutDashboard>
         <div className="p-3 max-w-screen-md mx-auto">
-          <div className="mb-8">
-            <UploadImageInput
-              value=""
-              onChange={(val) => console.log('val', val)}
-            />
-          </div>
+          <div className="mb-8" />
           <div className="grid grid-cols-2 gap-7  items-center">
             <Input text="product-name" type="text" placeholder="product-name" />
             <Input text="price" type="text" placeholder="price" />
