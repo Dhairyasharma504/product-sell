@@ -121,11 +121,14 @@ export default withFormik({
     password: '',
   }),
   validationSchema: Yup.object().shape({
-    firstname: Yup.string().required('First name is required!'),
-    Lastname: Yup.string().required('Last name is required!'),
+    firstname: Yup.string()
+      .min(2, 'Too Short!')
+      .max(30, 'Too Long!')
+      .required('First name is required!'),
+    Lastname: Yup.string(),
     password: Yup.string()
       .required('Password is required!')
-      .min(4, 'Seems a bit short...'),
+      .min(8, 'Seems a bit short...'),
   }),
 
   handleSubmit: (values, { setSubmitting, props }) => {
