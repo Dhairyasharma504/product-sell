@@ -49,7 +49,7 @@ const LoginForm = ({
       <div className="flex justify-end mt-2 text-xs text-gray-600">
         <Link href="/auth/forgot-password">
           <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
-            Forgot Password
+            Forgot Password ?
           </a>
         </Link>
       </div>
