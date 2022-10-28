@@ -27,7 +27,7 @@ const index = () => {
               Don&apos;t have an account?
               <Link href="/auth/register">
                 <a className="ml-2 font-bold text-xs text-black cursor-pointer hover:underline">
-                  Create one
+                  Create one ?
                 </a>
               </Link>
             </p>
