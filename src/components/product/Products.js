@@ -29,12 +29,12 @@ const Products = () => {
     });
   };
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
       {products &&
         products.map((item) => (
           <div
             key={item.name}
-            className="rounded overflow-hidden border border-gray-200 "
+            className="rounded overflow-hidden border border-gray-200 hover:shadow-sm "
           >
             <div className="px-4 py-4 flex ">
               <img

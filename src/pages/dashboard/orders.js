@@ -38,7 +38,7 @@ const Orders = () => {
                 'Actions',
               ]}
             />
-            <tbody className="text-gray-600 text-sm font-light">
+            <tbody className="text--600 text-sm font-light">
               <tr className="border-b border-gray-200 hover:bg-gray-100">
                 <td className="py-3 px-2 text-left ">
                   <div className="flex items-center">
