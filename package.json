@@ -78,6 +78,7 @@
     "redux-persist": "^6.0.0",
     "styled-components": "^5.3.6",
     "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.4",
     "vercel": "^28.4.10",
     "winston": "^3.6.0",
     "yup": "^0.32.11"

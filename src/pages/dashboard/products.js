@@ -49,7 +49,7 @@ const Products = () => {
   return (
     <div>
       <LayoutDashboard>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-6">
           <div>
             <p className="text-2xl font-semibold">Products</p>
           </div>

@@ -44,7 +44,7 @@ const Headers = ({ onMenuClick }) => (
         </button>
 
         <div className="  rounded-full cursor-pointer ">
-          <Link href="/pages/auth/profile">
+          <Link href="/auth/profile">
             <img
               className="h-11 w-11  rounded-full object-fill object-center overflow-hidden m-2"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1…d=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
