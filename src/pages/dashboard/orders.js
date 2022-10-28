@@ -1,6 +1,3 @@
-// import dynamic from 'next/dynamic';
-
-import { IoMdTrash } from 'react-icons/io';
 import Swal from 'sweetalert2';
 import LayoutDashboard from '../../components/DashboardLayout';
 import TableHead from '../../components/elements/TableHead';
