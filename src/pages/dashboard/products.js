@@ -6,42 +6,7 @@ import LayoutDashboard from '../../components/DashboardLayout';
 import ProductsList from '../../components/product/Products';
 
 const products = [
-  {
-    name: 'Apple',
-    price: 100,
-  },
-  {
-    name: 'pizza',
-    price: 370,
-  },
-  {
-    name: 'Burger',
-    price: 310,
-  },
-  {
-    name: 'salad',
-    price: 50,
-  },
-  {
-    name: 'Noodle',
-    price: 370,
-  },
-  {
-    name: 'Pasta',
-    price: 310,
-  },
-  {
-    name: 'Chicken',
-    price: 350,
-  },
-  {
-    name: 'Salmon',
-    price: 450,
-  },
-  {
-    name: 'Salmon',
-    price: 50,
-  },
+
 ];
 
 const Products = () => {
