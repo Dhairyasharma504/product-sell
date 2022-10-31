@@ -3,10 +3,9 @@ import TableHead from '../../components/elements/TableHead';
 import Heading from '../../components/elements/Heading';
 
 const orders = [
-  { id: 'ORDER76767', status: 'complete', amount: 200, userName: 'Amit Kumar' },
-  { id: 'ORDER76768', status: 'failed', amount: 500, userName: 'Amit Kumar' },
-  { id: 'ORDER76769', status: 'canceled', amount: 300, userName: 'Amit Kumar' },
-  { id: 'ORDER76770', status: 'pending', amount: 280, userName: 'Amit Kumar' },
+  { id: 'sodal', status: 'failed', amount: 500, userName: 'dhairya' },
+  { id: 'reeru', status: 'canceled', amount: 300, userName: 'bobby' },
+  { id: 'ORDER76770', status: 'pending', amount: 280, userName: 'rimple' },
 ];
 const stats = [
   {
