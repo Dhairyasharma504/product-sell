@@ -89,7 +89,16 @@ const Signup = ({
         />
       </span>
     </div>
-    <Input type="text" placeholder="Email" text="e-mail" id="email" />
+    <Input
+      text="Email Address"
+      type="email"
+      placeholder="Email Address"
+      name="email"
+      value={values.email}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      error={errors.email && touched.email ? errors.email : undefined}
+    />
     <Input
       text="password"
       type="password"
@@ -118,6 +127,7 @@ export default withFormik({
   mapPropsToValues: () => ({
     firstname: '',
     Lastname: '',
+    email: '',
     password: '',
   }),
   validationSchema: Yup.object().shape({
@@ -126,6 +136,7 @@ export default withFormik({
       .max(30, 'Too Long!')
       .required('First name is required!'),
     Lastname: Yup.string(),
+    email: Yup.string().email('Invalid email ').required('Email is Required!'),
     password: Yup.string()
       .required('Password is required!')
       .min(8, 'Seems a bit short...'),

@@ -6,7 +6,7 @@ export default function TableHead({ tableHead }) {
           tableHead.map((item) => (
             <th
               key={item.id ? item.id : item}
-              className={`${item.className} px-15 py-3 border-b-2 border-primary text-xs font-semibold tracking-wider `}
+              className={`${item.className} px-6 py-3 border-b-2 border-primary text-xs font-semibold tracking-wider `}
             >
               {item.value ? item.value : item}
             </th>
