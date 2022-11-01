@@ -16,7 +16,7 @@ const Register = () => {
           <img
             className="h-12 mx-auto mb-3"
             alt="App Name"
-            src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
+            src="../images/logo.webp"
           />
           <h1 className="text-xl font-semibold">
             Hello there ?,{' '}

@@ -14,7 +14,7 @@ const forgetPassword = () => (
           <img
             className="h-12 mx-auto mb-3"
             alt="App Name"
-            src="https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75"
+            src="../images/logo.webp"
           />
           <div className="px-8 mb-4 text-center ">
             <h3 className="pt-4 mb-2 text-2xl">Forgot Your Password?</h3>
