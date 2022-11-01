@@ -115,11 +115,13 @@ const Signup = ({
         login
       </Button>
     </div>
-    <Link href="/">
-      <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
-        Already registered?
-      </a>
-    </Link>
+    <div className="flex justify-center">
+      <Link href="/">
+        <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+          Already registered?
+        </a>
+      </Link>
+    </div>
   </form>
 );
 
