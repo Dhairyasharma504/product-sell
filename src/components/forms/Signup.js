@@ -109,7 +109,20 @@ const Signup = ({
       onBlur={handleBlur}
       error={errors.password && touched.password ? errors.password : undefined}
     />
-    <Input type="text" placeholder="ConfirmPassword" text="confirm-password" />
+    <Input
+      type="text"
+      placeholder="ConfirmPassword"
+      text="confirm-password"
+      name="confirmPassword"
+      value={values.confirmPassword}
+      onChange={handleChange}
+      onBlur={handleBlur}
+      error={
+        errors.confirmPassword && touched.confirmPassword
+          ? errors.confirmPassword
+          : undefined
+      }
+    />
     <div className="text-center">
       <Button type="submit" disabled={isSubmitting}>
         login
@@ -131,6 +144,7 @@ export default withFormik({
     Lastname: '',
     email: '',
     password: '',
+    confirmPassword: '',
   }),
   validationSchema: Yup.object().shape({
     firstname: Yup.string()
@@ -142,6 +156,12 @@ export default withFormik({
     password: Yup.string()
       .required('Password is required!')
       .min(8, 'Seems a bit short...'),
+    confirmPassword: Yup.string()
+      .required('This field is required!')
+      .label('Confirm password')
+      .test('passwords-match', 'Passwords not matched!', function (values) {
+        return this.parent.password === values;
+      }),
   }),
 
   handleSubmit: (values, { setSubmitting, props }) => {
