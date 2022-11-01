@@ -5,9 +5,7 @@ import { MdOutlineAddCircleOutline } from 'react-icons/md';
 import LayoutDashboard from '../../components/DashboardLayout';
 import ProductsList from '../../components/product/Products';
 
-const products = [
-
-];
+const products = [];
 
 const Products = () => {
   const router = useRouter();
