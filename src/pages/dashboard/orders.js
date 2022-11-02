@@ -9,6 +9,7 @@ const order = [
     address: 'ORDER76767',
     status: 'complete',
     amount: 200,
+    image: 'images/',
     userName: 'Amit Kumar',
   },
   {
@@ -53,7 +54,6 @@ const Orders = () => {
       confirmButtonText: 'Yes',
       denyButtonText: `No`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         Swal.fire(
           'Success!',
@@ -63,7 +63,6 @@ const Orders = () => {
       }
     });
   };
-  console.log('ddd', showModal);
   return (
     <>
       <Model
@@ -82,7 +81,7 @@ const Orders = () => {
               <TableHead
                 tableHead={[
                   'customer',
-                  'Address',
+                  'OrderID',
                   'Menu',
                   'Quantity',
                   'Status',
@@ -93,14 +92,14 @@ const Orders = () => {
                 {order.map((item) => (
                   <tr
                     key={item.id}
-                    className="border-b border-gray-200 hover:bg-gray-100"
+                    className="border-b border-gray-200 hover:bg-gray-100 "
                   >
                     <td className="py-3 px-2 text-left ">
                       <div className="flex items-center">
                         <img
-                          className="w-6 h-6 rounded-full"
-                          src="https://randomuser.me/api/portraits/men/1.jpg"
-                          alt="portraits"
+                          className="w-6 h-6 rounded-full pr-10"
+                          src={item.image}
+                          alt="po"
                         />
 
                         <span className="font-medium"> {item.userName}</span>

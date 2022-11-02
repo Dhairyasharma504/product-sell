@@ -76,9 +76,9 @@ const Signup = ({
       </span>
       <span className="w-1/2">
         <Input
-          text="Lastname"
+          text="Last name"
           type="text"
-          placeholder="Lastname"
+          placeholder="Last name"
           name="Lastname"
           value={values.Lastname}
           onChange={handleChange}
