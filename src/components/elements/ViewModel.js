@@ -8,11 +8,11 @@ const Model = ({ visible, title, children, onClose }) => (
       aria-hidden="true"
       className={
         visible
-          ? 'overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center'
+          ? 'bg-[#00000090] flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center'
           : 'hidden'
       }
     >
-      <div className="relative p-4 w-full max-w-2xl h-full md:h-auto">
+      <div className="relative p-4 w-full max-w-2xl h-full md:h-auto mx-auto">
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <div className="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">

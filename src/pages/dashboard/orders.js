@@ -44,7 +44,7 @@ const order = [
   },
 ];
 const Orders = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const handleRemove = () => {
     Swal.fire({
       title: 'Do you want to delete the product?',
