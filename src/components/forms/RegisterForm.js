@@ -15,7 +15,7 @@
 //   handleChange,
 //   handleBlur,
 // }) => (
-//   <form onSubmit={handleSubmit} id={formId} tw="flex flex-col">
+//   <form onSubmit={handleSubmit} id={formId} className="flex flex-col">
 //     <Input
 //       label="Name"
 //       placeholder="Enter your name"
@@ -48,7 +48,7 @@
 //       error={errors.email && touched.email ? errors.email : undefined}
 //     />
 
-//     <div tw ="text-center">
+//     <div className ="text-center">
 //       <Button type="submit" disabled={isSubmitting}>
 //         login
 //       </Button>
@@ -76,7 +76,6 @@
 //   displayName: formId, // helps with React DevTools
 // })(RegisterForm);
 import React from 'react';
-import 'twin.macro';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
 import Link from 'next/link';
@@ -96,8 +95,8 @@ const RegisterForm = ({
   handleChange,
   handleBlur,
 }) => (
-  <form onSubmit={handleSubmit} tw="mt-6">
-    <div tw="">
+  <form onSubmit={handleSubmit} className="mt-6">
+    <div className="">
       <Input
         text="first name"
         label="first name"
@@ -208,14 +207,14 @@ const RegisterForm = ({
             : undefined
         }
       />
-      <div tw="text-center">
+      <div className="text-center">
         <Button type="submit" disabled={isSubmitting}>
           login
         </Button>
       </div>
-      <div tw="flex justify-center">
+      <div className="flex justify-center">
         <Link href="/">
-          <a tw="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+          <a className="flex justify-between  mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
             Already registered?
           </a>
         </Link>
