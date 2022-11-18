@@ -9,13 +9,13 @@ const order = [
     address: 'ORDER76767',
     status: 'complete',
     amount: 200,
-    image: 'images/dp.jpg',
+    image: '/images/dp.jpg',
     userName: 'Amit Kumar',
   },
   {
     address: 'ORDER76768',
     status: 'failed',
-    image: 'images/dp.jpg',
+    image: '/images/dp.jpg',
     amount: 500,
     userName: 'Amit Kumdadaaar',
   },
@@ -98,9 +98,9 @@ const Orders = () => {
                     <td className="py-3 px-2 text-left ">
                       <div className="flex items-center">
                         <img
-                          className="w-6 h-6 rounded-full pr-10"
+                          className="w-7 h-7 rounded-full mr-3"
                           src={item.image}
-                          alt="po"
+                          alt={item.userName}
                         />
 
                         <span className="font-medium"> {item.userName}</span>
