@@ -20,14 +20,7 @@ import {
 } from 'react-icons/fi';
 import { MdOutlineDashboard } from 'react-icons/md';
 import { RiSettings3Line } from 'react-icons/ri';
-// import {
-//   BsCalendar4Event,
-//   BsCreditCard2Front,
-//   BsCurrencyDollar,
-//   BsFileEarmarkText,
-// } from 'react-icons/bs';
 
-// import config from '../../utils/config';
 const Container = styled.div`
   .pro-sidebar .pro-menu .pro-menu-item.active {
     border-top-right-radius: 30px;
