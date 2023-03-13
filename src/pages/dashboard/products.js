@@ -1,38 +1,37 @@
-import React from 'react';
-
-import { useRouter } from 'next/router';
-import { MdOutlineAddCircleOutline } from 'react-icons/md';
 import LayoutDashboard from '../../components/DashboardLayout';
-import ProductsList from '../../components/product/Products';
+import ProductsList from '../../components/ProductsList';
 
-const products = [];
+const products = [
+  {
+    id: '1',
+    name: 'Pipe',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
+  {
+    id: '1',
+    name: 'Pipe',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
+  {
+    id: '1',
+    name: 'Pipe',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
+];
 
-const Products = () => {
-  const router = useRouter();
+export default function Home() {
   return (
-    <div>
-      <LayoutDashboard>
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <p className="text-2xl font-semibold">Products</p>
-          </div>
-          <div className="text-right">
-            <button
-              onClick={() => router.push('/dashboard/add-product')}
-              type="button"
-              className="p-3 font-medium tracking-widest text-white  bg-black shadow-lg focus:outline-none hover:bg-brand hover:shadow-none"
-            >
-              <span className="flex items-center">
-                <MdOutlineAddCircleOutline className="h-5 w-5 mr-2" />
-                Create Product
-              </span>
-            </button>
-          </div>
-        </div>
-
+    <LayoutDashboard>
+      <div className="mt-8 container mx-auto">
+        <h3 className="mb-4">All Products</h3>
         <ProductsList products={products} />
-      </LayoutDashboard>
-    </div>
+      </div>
+    </LayoutDashboard>
   );
-};
-export default Products;
+}

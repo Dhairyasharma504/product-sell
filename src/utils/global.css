@@ -4,11 +4,10 @@
 
 @layer base {
   body {
-
   }
 }
 input:focus ~ .input-text,
-input:not(:placeholder-shown) ~ .input-text{
+input:not(:placeholder-shown) ~ .input-text {
   @apply text-gray-500 text-opacity-80 text-base transform -translate-y-7 -translate-x-1.5 scale-75;
 }
 input:-webkit-autofill,
@@ -20,7 +19,6 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
   transition: background-color 5000s ease-in-out 0s;
 }

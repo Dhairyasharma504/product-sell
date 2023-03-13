@@ -12,7 +12,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import {
-  FiUsers,
   FiMessageSquare,
   FiLogOut,
   FiArrowRight,
@@ -74,12 +73,6 @@ const menuItems = [
     path: '/dashboard',
   },
   {
-    id: 2,
-    title: 'Orders',
-    icon: <FiUsers />,
-    path: '/dashboard/orders',
-  },
-  {
     id: 3,
     title: 'Products',
     icon: <FiMessageSquare />,
@@ -87,9 +80,9 @@ const menuItems = [
   },
   {
     id: 4,
-    title: 'Settings',
+    title: 'Add product',
     icon: <RiSettings3Line />,
-    path: '/dashboard/settings',
+    path: '/dashboard/add-product',
   },
 ];
 
@@ -116,12 +109,12 @@ function Sidebar({ toggled, onToggle }) {
             <MenuItem>
               <div className="text-center h-16 py-1">
                 <img
-                  className={`${collapsed ? 'h-10 w-10' : 'h-14'}`}
+                  className={`${collapsed ? 'h-10 w-10' : 'h-14 ml-6'}`}
                   alt="App Name"
                   src={`${
                     !collapsed
-                      ? 'https://foodwix.zeiq.co/_next/image?url=%2Fimages%2Flogo.png&w=2048&q=75'
-                      : '/images/Foodwix-icon.png'
+                      ? 'https://cdn-icons-png.flaticon.com/512/4149/4149727.png'
+                      : 'https://cdn-icons-png.flaticon.com/512/4149/4149727.png'
                   }`}
                 />
               </div>

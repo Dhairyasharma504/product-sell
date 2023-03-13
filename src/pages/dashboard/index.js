@@ -1,11 +1,30 @@
+import { useState } from 'react';
 import LayoutDashboard from '../../components/DashboardLayout';
-import TableHead from '../../components/elements/TableHead';
 import Heading from '../../components/elements/Heading';
+import ProductsList from '../../components/ProductsList';
 
-const orders = [
-  { id: 'ORDER76760', status: 'failed', amount: 500, userName: 'dhairya' },
-  { id: 'ORDER76770', status: 'canceled', amount: 300, userName: 'bobby' },
-  { id: 'ORDER76670', status: 'pending', amount: 280, userName: 'rimple' },
+const products = [
+  {
+    id: '1',
+    name: 'Pipe',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
+  {
+    id: '1',
+    name: 'Tanki',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
+  {
+    id: '1',
+    name: 'Moter',
+    status: 'active',
+    price: 500,
+    updatedAt: '20-11-2022',
+  },
 ];
 const stats = [
   {
@@ -30,8 +49,21 @@ const stats = [
   },
 ];
 export default function Home() {
+  const [data, setData] = useState(products || []);
+  const handleSearch = (value) => {
+    console.log('value', value);
+    if (value === '' || !value) {
+      setData(products);
+    } else if (value?.length > 0) {
+      const result = products.filter((item) =>
+        item?.name?.toLowerCase().includes(value?.toLowerCase()),
+      );
+      console.log('result', result);
+      setData(result || []);
+    }
+  };
   return (
-    <LayoutDashboard>
+    <LayoutDashboard onSearch={handleSearch}>
       <div className="grid grid-cols-4 gap-6">
         {stats.map((item) => (
           <div className="shadow-lg px-3 py-5 rounded-md text-center bg-primary hover:bg-brand cursor-pointer">
@@ -44,52 +76,7 @@ export default function Home() {
       </div>
       <div className="mt-8">
         <h3 className="mb-4">Latest Orders</h3>
-        <div className="overflow-x-auto relative">
-          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <TableHead
-              tableHead={['Order Id', 'User Name', 'Amount', 'Status']}
-            />
-            <tbody>
-              {orders.map((item) => (
-                <tr
-                  key={item.id}
-                  className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                >
-                  <th
-                    scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
-                    {item.id}
-                  </th>
-                  <td className="py-4 px-6">{item.userName}</td>
-                  <td className="py-4 px-6">$ {item.amount}</td>
-                  <td className="py-4 px-6 capitalize">
-                    {item.status === 'canceled' && (
-                      <span className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
-                        {item.status}
-                      </span>
-                    )}
-                    {item.status === 'complete' && (
-                      <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
-                        {item.status}
-                      </span>
-                    )}
-                    {item.status === 'pending' && (
-                      <span className="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
-                        {item.status}
-                      </span>
-                    )}
-                    {item.status === 'failed' && (
-                      <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">
-                        {item.status}
-                      </span>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ProductsList products={data} />
       </div>
     </LayoutDashboard>
   );

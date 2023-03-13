@@ -20,8 +20,13 @@ const addProduct = () => {
           <div className="grid grid-cols-2 gap-7  items-center">
             <Input text="product-name" type="text" placeholder="product-name" />
             <Input text="price" type="text" placeholder="price" />
+            <Input
+              text="Purchase-Date"
+              type="text"
+              placeholder="Purchase-Date"
+            />
           </div>
-          <Input text="description" type="text" placeholder="description" />
+
           <div className="text-center">
             <button
               onClick={() => router.push('/dashboard/products')}

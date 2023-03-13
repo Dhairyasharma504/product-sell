@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
-export default function LayoutDashboard({ children }) {
+export default function LayoutDashboard({ children, onSearch }) {
   const [showSideBar, setShowSideBar] = useState(true);
   const [showMobileSideBar, setShowMobileSideBar] = useState(false);
 
@@ -23,6 +23,7 @@ export default function LayoutDashboard({ children }) {
         <div className="pb-6">
           <Header
             data={userData}
+            onSearch={onSearch}
             onMenuClick={() => {
               setShowSideBar(!showSideBar);
               setShowMobileSideBar(!showMobileSideBar);
