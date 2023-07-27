@@ -1,9 +1,10 @@
 import React from 'react';
-import { IoMdTrash } from 'react-icons/io';
-import { MdEditNote } from 'react-icons/md';
-import { AiOutlineEye } from 'react-icons/ai';
+// import { IoMdTrash } from 'react-icons/io';
+// import { MdEditNote } from 'react-icons/md';
+// import { AiOutlineEye } from 'react-icons/ai';
 import Link from 'next/link';
 import Swal from 'sweetalert2';
+import Image from 'next/image';
 import TableHead from './elements/TableHead';
 
 const ProductsList = ({ products }) => {
@@ -26,29 +27,32 @@ const ProductsList = ({ products }) => {
       }
     });
   };
+  console.log(handleRemove, 'handleRemove');
   return (
     <div className="overflow-x-auto relative">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <table className="w-full text-sm text-left text-gray-500">
         <TableHead
           tableHead={[
             'Product Name',
             'Price',
             'Updated At',
             'Status',
-            'Actions',
+            'Image',
+            // 'Actions',
           ]}
         />
         <tbody>
           {products.map((item) => (
-            <tr
-              key={item.id}
-              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-            >
+            <tr key={item.id} className="bg-white border-b ">
               <th
                 scope="row"
-                className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"
               >
                 {item.name}
+                <span className="font-medium px-3 text-gray-900">
+                  (company-Name)
+                </span>{' '}
+                <span>size</span>
               </th>
               <td className="py-4 px-6">₹ {item.price}</td>
               <td className="py-4 px-6">{item.updatedAt}</td>
@@ -64,7 +68,7 @@ const ProductsList = ({ products }) => {
                   </span>
                 )}
               </td>
-              <td>
+              {/* <td>
                 <div className="ml-3 flex space-x-2 items-start">
                   <Link href={`/dashboard/product/${item.id}`}>
                     <a className="text-green-500">
@@ -83,6 +87,20 @@ const ProductsList = ({ products }) => {
                   >
                     <IoMdTrash className="h-5 w-5" />
                   </button>
+                </div>
+              </td> */}
+              <td>
+                <div className=" flex space-x-2 items-start">
+                  <div className=" p-4 ">
+                    <Link href="/auth/profile">
+                      <Image
+                        src="/images/food-restaurant.jpg"
+                        width={200}
+                        height={130}
+                        alt="Picture of the author"
+                      />
+                    </Link>
+                  </div>
                 </div>
               </td>
             </tr>

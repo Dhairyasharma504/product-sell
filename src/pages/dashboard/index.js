@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import LayoutDashboard from '../../components/DashboardLayout';
-import Heading from '../../components/elements/Heading';
 import ProductsList from '../../components/ProductsList';
 
 const products = [
@@ -26,28 +25,28 @@ const products = [
     updatedAt: '20-11-2022',
   },
 ];
-const stats = [
-  {
-    id: 1,
-    label: 'Total Orders',
-    value: 300,
-  },
-  {
-    id: 2,
-    label: 'Today Orders',
-    value: 14,
-  },
-  {
-    id: 3,
-    label: 'Pending Orders',
-    value: 10,
-  },
-  {
-    id: 4,
-    label: 'Cancelled Orders',
-    value: 3,
-  },
-];
+// const stats = [
+//   {
+//     id: 1,
+//     label: 'Total Orders',
+//     value: 300,
+//   },
+//   {
+//     id: 2,
+//     label: 'Today Orders',
+//     value: 14,
+//   },
+//   {
+//     id: 3,
+//     label: 'Pending Orders',
+//     value: 10,
+//   },
+//   {
+//     id: 4,
+//     label: 'Cancelled Orders',
+//     value: 3,
+//   },
+// ];
 export default function Home() {
   const [data, setData] = useState(products || []);
   const handleSearch = (value) => {
@@ -64,7 +63,7 @@ export default function Home() {
   };
   return (
     <LayoutDashboard onSearch={handleSearch}>
-      <div className="grid grid-cols-4 gap-6">
+      {/* <div className="grid grid-cols-4 gap-6">
         {stats.map((item) => (
           <div className="shadow-lg px-3 py-5 rounded-md text-center bg-primary hover:bg-brand cursor-pointer">
             <Heading className="text-white">{item.label}</Heading>
@@ -73,7 +72,7 @@ export default function Home() {
             </Heading>
           </div>
         ))}
-      </div>
+      </div> */}
       <div className="mt-8">
         <h3 className="mb-4">Latest Orders</h3>
         <ProductsList products={data} />
