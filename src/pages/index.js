@@ -5,6 +5,7 @@ import LoginForm from '../components/forms/LoginForm';
 
 const index = () => {
   const router = useRouter();
+
   return (
     <div>
       <div

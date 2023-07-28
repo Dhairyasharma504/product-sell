@@ -1,30 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LayoutDashboard from '../../components/DashboardLayout';
 import ProductsList from '../../components/ProductsList';
+import { getProducts } from '../../utils/client';
 
-const products = [
-  {
-    id: '1',
-    name: 'Pipe',
-    status: 'active',
-    price: 500,
-    updatedAt: '20-11-2022',
-  },
-  {
-    id: '1',
-    name: 'Tanki',
-    status: 'active',
-    price: 500,
-    updatedAt: '20-11-2022',
-  },
-  {
-    id: '1',
-    name: 'Moter',
-    status: 'active',
-    price: 500,
-    updatedAt: '20-11-2022',
-  },
-];
+// const products = [
+//   {
+//     id: '1',
+//     name: 'Pipe',
+//     status: 'active',
+//     price: 500,
+//     updatedAt: '20-11-2022',
+//   },
+//   {
+//     id: '1',
+//     name: 'Tanki',
+//     status: 'active',
+//     price: 500,
+//     updatedAt: '20-11-2022',
+//   },
+//   {
+//     id: '1',
+//     name: 'Moter',
+//     status: 'active',
+//     price: 500,
+//     updatedAt: '20-11-2022',
+//   },
+// ];
 // const stats = [
 //   {
 //     id: 1,
@@ -48,6 +49,7 @@ const products = [
 //   },
 // ];
 export default function Home() {
+  const [products, setProducts] = useState([]);
   const [data, setData] = useState(products || []);
   const handleSearch = (value) => {
     console.log('value', value);
@@ -61,6 +63,16 @@ export default function Home() {
       setData(result || []);
     }
   };
+  const getAllProducts = async () => {
+    const res = await getProducts();
+    setProducts(res);
+    setData(res);
+  };
+
+  useEffect(() => {
+    getAllProducts();
+  }, []);
+
   return (
     <LayoutDashboard onSearch={handleSearch}>
       {/* <div className="grid grid-cols-4 gap-6">
