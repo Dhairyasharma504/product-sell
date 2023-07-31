@@ -2,8 +2,9 @@ const withPlugins = require('next-compose-plugins');
 const withMDX = require('@next/mdx')();
 
 const nextConfig = {
+  reactStrictMode: true,
   images: {
-    domains: ['assets.vercel.com', 'dummyimage.com'],
+    domains: ['cdn.sanity.io'],
   },
   pageExtensions: ['mdx', 'jsx', 'js'],
   devIndicators: {

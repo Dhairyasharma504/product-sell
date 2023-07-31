@@ -11,14 +11,8 @@ import styled from 'styled-components';
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import {
-  FiMessageSquare,
-  FiLogOut,
-  FiArrowRight,
-  FiArrowLeft,
-} from 'react-icons/fi';
+import { FiLogOut, FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 import { MdOutlineDashboard } from 'react-icons/md';
-import { RiSettings3Line } from 'react-icons/ri';
 
 const Container = styled.div`
   .pro-sidebar .pro-menu .pro-menu-item.active {
@@ -71,18 +65,6 @@ const menuItems = [
     title: 'Dashboard',
     icon: <MdOutlineDashboard />,
     path: '/dashboard',
-  },
-  {
-    id: 3,
-    title: 'Products',
-    icon: <FiMessageSquare />,
-    path: '/dashboard/products',
-  },
-  {
-    id: 4,
-    title: 'Add product',
-    icon: <RiSettings3Line />,
-    path: '/dashboard/add-product',
   },
 ];
 

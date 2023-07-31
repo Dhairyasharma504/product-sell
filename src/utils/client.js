@@ -13,7 +13,9 @@ export const client = createClient({
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
 export async function getProducts() {
-  const res = await client.fetch('*[_type == "product"]');
+  const res = await client.fetch(
+    '*[_type == "product"]{..., "variants":variants[]{..., "image": images.asset->url},}',
+  );
   return res;
 }
 

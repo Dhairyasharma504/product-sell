@@ -60,9 +60,11 @@ export default function Home() {
         item?.name?.toLowerCase().includes(value?.toLowerCase()),
       );
       console.log('result', result);
+
       setData(result || []);
     }
   };
+  console.log(products, 'products');
   const getAllProducts = async () => {
     const res = await getProducts();
     setProducts(res);
@@ -86,7 +88,7 @@ export default function Home() {
         ))}
       </div> */}
       <div className="mt-8">
-        <h3 className="mb-4">Latest Orders</h3>
+        <h3 className="mb-4 capitalize">All product</h3>
         <ProductsList products={data} />
       </div>
     </LayoutDashboard>
