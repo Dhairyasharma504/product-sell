@@ -56,9 +56,21 @@ export default function Home() {
     if (value === '' || !value) {
       setData(products);
     } else if (value?.length > 0) {
-      const result = products.filter((item) =>
-        item?.name?.toLowerCase().includes(value?.toLowerCase()),
-      );
+      // const result = products.filter((item) =>
+      //   item?.name?.toLowerCase().includes(value?.toLowerCase()),
+      // );
+      const result = products.filter((product) => {
+        const nameMatch = product.name
+          .toLowerCase()
+          .includes(value.toLowerCase());
+        const companyMatch = product.companyname
+          .toLowerCase()
+          .includes(value.toLowerCase());
+        // const categoryMatch = product.category
+        //   .toLowerCase()
+        //   .includes(value.toLowerCase());
+        return nameMatch || companyMatch;
+      });
       console.log('result', result);
 
       setData(result || []);
